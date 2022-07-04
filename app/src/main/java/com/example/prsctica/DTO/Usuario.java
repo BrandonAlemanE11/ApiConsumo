@@ -25,11 +25,11 @@ public class Usuario {
         this.ID = ID;
     }
 
-    public String getNombre() {
+    public String getnombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setnombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -129,11 +129,11 @@ public class Usuario {
         this.estatus = estatus;
     }
 
-    public String getMensaje() {
+    public String getmensaje() {
         return mensaje;
     }
 
-    public void setMensaje(String mensaje) {
+    public void setmensaje(String mensaje) {
         this.mensaje = mensaje;
     }
 

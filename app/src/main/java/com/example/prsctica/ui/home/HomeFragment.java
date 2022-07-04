@@ -61,18 +61,16 @@ public class HomeFragment extends Fragment {
                 call.enqueue(new Callback<Usuario>() {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                        Usuario user = response.body();
-                        if(response.isSuccessful() && user.getEstatus().equals("Error")){
-                            Toast.makeText(getContext(), user.getMensaje().toString(), Toast.LENGTH_SHORT).show();
-                        }
-                        else
-                        {
+                        if(response.isSuccessful() && response.body() != null){
                             correo.getText().clear();
                             contrasenia.getText().clear();
-                            Toast.makeText(getContext(), user.getMensaje().toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Bienvenido", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            contrasenia.getText().clear();
+                            Toast.makeText(getContext(), "Error de credenciales", Toast.LENGTH_SHORT).show();
                         }
                     }
-
                     @Override
                     public void onFailure(Call<Usuario> call, Throwable t) {
                         Toast.makeText(getContext(), "Error de conexion", Toast.LENGTH_SHORT).show();
