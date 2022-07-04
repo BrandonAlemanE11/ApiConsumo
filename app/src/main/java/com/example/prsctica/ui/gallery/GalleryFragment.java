@@ -70,20 +70,20 @@ public class GalleryFragment extends Fragment {
                 call.enqueue(new Callback<Usuario>() {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                        if(response.isSuccessful() && response.body() != null){
-                            nombre.getText().clear();
-                            apellidoPaterno.getText().clear();
-                            apellidoMaterno.getText().clear();
-                            correo.getText().clear();
-                            contrasenia.getText().clear();
-                            contrasenia2.getText().clear();
-                            fechaNacimiento.getText().clear();
+                        if(response.isSuccessful()){
                             Usuario user = response.body();
                             if(user.getEstatus().toString().equals("Error"))
                             {
                                 Toast.makeText(getContext(), user.getmensaje().toString(), Toast.LENGTH_SHORT).show();
                             }
                             else{
+                                nombre.getText().clear();
+                                apellidoPaterno.getText().clear();
+                                apellidoMaterno.getText().clear();
+                                correo.getText().clear();
+                                contrasenia.getText().clear();
+                                contrasenia2.getText().clear();
+                                fechaNacimiento.getText().clear();
                                 Toast.makeText(getContext(), user.getmensaje().toString(), Toast.LENGTH_SHORT).show();
                             }
 
