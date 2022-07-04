@@ -42,7 +42,6 @@ public class SlideshowFragment extends Fragment{
                 find(idpokemon.getText().toString());
             }
         });
-
         return root;
     }
 

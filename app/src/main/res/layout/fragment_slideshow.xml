@@ -22,54 +22,55 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat2"
-            android:layout_width="411dp"
-            android:layout_height="189dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat2"
+        android:layout_width="407dp"
+        android:layout_height="315dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038">
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxBackgroundMode="outline">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline">
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/idPokemon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="no"
-                android:hint="Ingresa el id de algun Pokemon"
-                android:inputType="text"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/idPokemon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="no"
+            android:hint="Ingresa el id de algun Pokemon"
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-            <Button
-                android:id="@+id/btnConsulta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="#E100BCD4"
-                android:text="Consultar"
-                android:textColor="#000000"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnConsulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#E100BCD4"
+            android:text="Consultar"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/nombrePokemon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pokemon"
-                tools:layout_editor_absoluteX="179dp"
-                tools:layout_editor_absoluteY="255dp" />
+        <TextView
+            android:id="@+id/nombrePokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pokemon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="255dp" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
