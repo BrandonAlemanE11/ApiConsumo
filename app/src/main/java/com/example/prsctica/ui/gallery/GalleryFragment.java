@@ -78,11 +78,14 @@ public class GalleryFragment extends Fragment {
                             contrasenia.getText().clear();
                             contrasenia2.getText().clear();
                             fechaNacimiento.getText().clear();
-
-
-
+                            Usuario user = response.body();
+                            if(user.getEstatus().toString().equals("Error")){
+                                Toast.makeText(getContext(), user.getmensaje().toString(), Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(getContext(), user.getmensaje().toString(), Toast.LENGTH_SHORT).show();
+                            }
                         }
-
                     }
 
                     @Override
